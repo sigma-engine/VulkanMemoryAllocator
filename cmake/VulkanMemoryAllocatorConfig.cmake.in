@@ -1,0 +1,8 @@
+get_filename_component(VulkanMemoryAllocator_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET VulkanMemoryAllocator::VulkanMemoryAllocator_image)
+    include("${VulkanMemoryAllocator_CMAKE_DIR}/VulkanMemoryAllocatorTargets.cmake")
+endif()
+
+set(VulkanMemoryAllocator_LIBRARIES VulkanMemoryAllocator::VulkanMemoryAllocator_image)
